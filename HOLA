@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Valores de L*, a*, y b*
+L = 91.47
+a = 44.2
+b = 39.62
+
+# Crear una figura y un eje 3D
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Crear un punto en el espacio CIELAB
+ax.scatter(a, b, L, c='r', marker='o', label='Color en CIELAB')
+
+# Etiquetar los ejes
+ax.set_xlabel('a*')
+ax.set_ylabel('b*')
+ax.set_zlabel('L*')
+
+# Mostrar el gráfico
+plt.legend()
+plt.show()
